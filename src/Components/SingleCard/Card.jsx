@@ -2,7 +2,6 @@ import React from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { Link, useNavigation } from 'react-router-dom';
-import { addToLocalStorage } from '../Utilites/Utiliti';
 
 const Card = ({ movie }) => {
     const { image, id, name, schedule, rating } = movie.show;

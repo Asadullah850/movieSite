@@ -5,10 +5,10 @@ import Navbar from './Components/Share/Nav/Navbar'
 function App() {
 
   return (
-    <div >
+    < >
       <Navbar></Navbar>
       <Outlet></Outlet>
-    </div>
+    </>
   )
 }
 

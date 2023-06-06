@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Details from './Components/CardDetails/Details';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
+import AllMovie from './Components/AllMovie/AllMovie';
 
 const router = createBrowserRouter([
   {
@@ -23,8 +25,16 @@ const router = createBrowserRouter([
         element:<Details></Details>,
         loader:()=>fetch(`https://api.tvmaze.com/search/shows?q=all`)
       },
+      {
+        path:'allMovie',
+        element:<AllMovie></AllMovie>,
+      },
     ],
-  }
+  },
+  {
+    path:'*',
+    element:<ErrorPage></ErrorPage>
+  },
   ])
 
   ReactDOM.createRoot(document.getElementById('root')).render(

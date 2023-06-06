@@ -3,4 +3,5 @@
 @tailwind utilities;
 #root{
 background-color: black;
+padding:0
 }
