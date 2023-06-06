@@ -19,14 +19,14 @@ const Home = () => {
         })
     }, [])
     return (
-        <div>
+        <div className='w-full'>
             home
             <div className="grid gap-4 mb-8 lg:grid-cols-4 md:grid-cols-2">
                 {
                     allMovie.map(movie => <Card movie={movie} ></Card>)
                 }
             </div>
-        </div>
+        </div> 
     );
 };
 
