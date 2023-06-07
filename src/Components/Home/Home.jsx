@@ -16,6 +16,7 @@ import './styles.css';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import Banner from './Banner';
 import SideBanner from './SideBanner/SideBanner';
+import SliderTwo from '../Slider/SliderTwo';
 
 
 const Home = () => {
@@ -47,13 +48,13 @@ const Home = () => {
             <Banner ></Banner>
             <h1 className='lg:my-8 my-2 text-white text-4xl'>Most Popular</h1>
             <div className="flex w-[80%] mx-auto gap-3">
-                
+
                 <div className="">
                     <SideBanner></SideBanner>
                 </div>
-                
+
                 <div className=" max-sm:hidden">
-                
+
                     <div className="grid gap-4 mb-8 lg:grid-cols-2 md:grid-cols-2">
                         {
                             allMovie.slice(4, 8).map(movie => <Card movie={movie}></Card>)
@@ -65,8 +66,22 @@ const Home = () => {
             <h1 className='lg:my-8 my-2 text-white text-4xl'>All Movies</h1>
             <div className="grid gap-4 mb-8 lg:grid-cols-4 md:grid-cols-2">
                 {
-                    allMovie.map(movie => <Card movie={movie}></Card>)
+                    allMovie.slice(0, 8).map(movie => <Card movie={movie}></Card>)
                 }
+            </div>
+            <h1 className='lg:my-8 my-2 text-white text-4xl'>Most view</h1>
+            <SliderTwo></SliderTwo>
+
+            <div className='my-8 w-[50%] mx-auto'>
+                <div className="text-white form-control w-80">
+                    <label className="label">
+                        <span className="label-text text-white">Enter your email address</span>
+                    </label>
+                    <div className="relative">
+                        <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
+                        <button className="btn btn-primary bg-slate-600 absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                    </div>
+                </div>
             </div>
 
         </div>
